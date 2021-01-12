@@ -1,0 +1,15 @@
+---
+- hosts: [webservers]
+  become: yes
+  tasks:
+    - name: install tree
+      apt:
+        name: tree
+        state: present
+      when: ansible_os_family== "Debian"
+
+    - name: install tree
+      yum:
+        name: tree
+        state: present
+      when: ansible_os_family== "RedHat"    
