@@ -2,14 +2,14 @@
 - hosts: all
   become: yes
   tasks:
-  - name: install wget  
-    yumm:
-      name: wget
-      state: present
-    ignore_errors: yes
+    - name: install wget  
+      yumm:
+       name: wget
+       state: present
+      ignore_errors: yes
 
-  - name: install tree
-    yum:
+    - name: install tree
+      yum:
        name: tree
        state: present
   
