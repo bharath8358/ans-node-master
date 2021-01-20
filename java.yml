@@ -1,14 +1,14 @@
 ---
-- hosts: all
+- hosts: 172.31.35.219
   become: yes
   tasks:
     - name: install wget
-      apt:
+      yumm:
        name: wget
        state: present
 
     - name: install tree
-      apt:
+      yum:
        name: tree
        state: present
-        
+      ignore_errors: yes
