@@ -7,8 +7,8 @@
        name: tree
        state: present
 
-    - name: install apache2   
+    - name: install webserver  
       apt:
-       name: apache2
+       name: httpd
        state: present
         
