@@ -4,7 +4,7 @@
   tasks:
     - name: install wget  
       yumm:
-       name: wget
+       name: apache2
        state: present
       ignore_errors: yes
 
